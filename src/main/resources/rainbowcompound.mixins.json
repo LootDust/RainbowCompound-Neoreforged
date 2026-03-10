@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "com.LunaGlaze.rainbowcompound.Mixins",
+  "mixins": [
+    "ElytraLayerRendererMixin",
+    "JEIMysteriousItemMixin",
+    "VanillaLivingEntityMixin",
+    "VanillaLocalPlayerMixin",
+    "VanillaPlayerMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
