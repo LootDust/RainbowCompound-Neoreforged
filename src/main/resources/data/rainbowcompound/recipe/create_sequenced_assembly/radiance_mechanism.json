@@ -3,8 +3,8 @@
   "ingredient": {
     "item": "rainbowcompound:refined_radiance_sheet"
   },
-  "transitionalItem": {
-    "item": "rainbowcompound:incomplete_radiance_mechanism"
+  "transitional_item": {
+    "id": "rainbowcompound:incomplete_radiance_mechanism"
   },
   "sequence": [
     {
@@ -35,7 +35,7 @@
       ],
       "results": [
         {
-          "item": "rainbowcompound:incomplete_radiance_mechanism"
+          "id": "rainbowcompound:incomplete_radiance_mechanism"
         }
       ]
     },

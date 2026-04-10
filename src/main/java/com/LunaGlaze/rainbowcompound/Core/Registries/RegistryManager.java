@@ -12,6 +12,7 @@ import com.LunaGlaze.rainbowcompound.Projects.Items.Armors.CuriosElytraItemRegis
 import com.LunaGlaze.rainbowcompound.Projects.Items.Basic.ItemsItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Foods.FoodsItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Props.PropsItemRegistry;
+import com.LunaGlaze.rainbowcompound.Projects.Items.SequencedAssembly.IncompleteItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Tools.ToolsItemRegistry;
 import com.LunaGlaze.rainbowcompound.RainbowCompound;
 import net.neoforged.bus.api.IEventBus;
@@ -19,14 +20,15 @@ import net.neoforged.bus.api.IEventBus;
 public class RegistryManager {
 
     public static void register(IEventBus modEventBus) {
-        FoodsItemRegistry.ITEMS.register(modEventBus);
-        ItemsItemRegistry.ITEMS.register(modEventBus);
-        ToolsItemRegistry.ITEMS.register(modEventBus);
         ArmorsItemRegistry.ITEMS.register(modEventBus);
-        PropsItemRegistry.ITEMS.register(modEventBus);
         BlocksBlockRegistry.BLOCKS.register(modEventBus);
         BlocksItemRegistry.ITEMS.register(modEventBus);
         EffectRegistry.EFFECTS.register(modEventBus);
+        FoodsItemRegistry.ITEMS.register(modEventBus);
+        IncompleteItemRegistry.ITEMS.register(modEventBus);
+        ItemsItemRegistry.ITEMS.register(modEventBus);
+        PropsItemRegistry.ITEMS.register(modEventBus);
+        ToolsItemRegistry.ITEMS.register(modEventBus);
 
         // Caelus
         if (RainbowCompound.isCuriousElytraLoaded) {

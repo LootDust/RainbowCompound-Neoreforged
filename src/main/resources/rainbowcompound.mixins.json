@@ -2,7 +2,6 @@
   "required": true,
   "package": "com.LunaGlaze.rainbowcompound.Mixins",
   "mixins": [
-    "ElytraLayerRendererMixin",
     "JEIMysteriousItemMixin"
   ],
   "client": [

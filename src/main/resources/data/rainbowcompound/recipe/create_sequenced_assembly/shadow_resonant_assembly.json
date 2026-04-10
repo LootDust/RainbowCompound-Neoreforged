@@ -3,8 +3,8 @@
   "ingredient": {
     "item": "rainbowcompound:shadow_mechanism"
   },
-  "transitionalItem": {
-    "item": "rainbowcompound:incomplete_shadow_resonant_assembly"
+  "transitional_item": {
+    "id": "rainbowcompound:incomplete_shadow_resonant_assembly"
   },
   "sequence": [
     {

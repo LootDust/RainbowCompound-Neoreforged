@@ -3,8 +3,8 @@
   "ingredient": {
     "item": "rainbowcompound:radiance_mechanism"
   },
-  "transitionalItem": {
-    "item": "rainbowcompound:incomplete_radiance_resonant_assembly"
+  "transitional_item": {
+    "id": "rainbowcompound:incomplete_radiance_resonant_assembly"
   },
   "sequence": [
     {

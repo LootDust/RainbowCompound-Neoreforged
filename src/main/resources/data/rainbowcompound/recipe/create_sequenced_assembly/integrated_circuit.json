@@ -3,8 +3,8 @@
   "ingredient": {
     "tag": "c:plates/lapis"
   },
-  "transitionalItem": {
-    "item": "rainbowcompound:incomplete_integrated_circuit"
+  "transitional_item": {
+    "id": "rainbowcompound:incomplete_integrated_circuit"
   },
   "sequence": [
     {
@@ -62,7 +62,7 @@
           "item": "rainbowcompound:incomplete_integrated_circuit"
         },
         {
-          "tag": "forge:nuggets/gold"
+          "tag": "c:nuggets/gold"
         }
       ],
       "results": [
