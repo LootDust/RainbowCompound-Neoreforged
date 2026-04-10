@@ -14,7 +14,6 @@ public class BlocksRenderTypeRegistry {
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(BlocksBlockRegistry.refinedradianceneon.get(), RenderType.translucent());
-
         });
     }
 }

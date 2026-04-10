@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbilities;
 
 import java.util.List;
-import java.util.UUID;
 
 import static net.neoforged.neoforge.common.ItemAbilities.AXE_SCRAPE;
 

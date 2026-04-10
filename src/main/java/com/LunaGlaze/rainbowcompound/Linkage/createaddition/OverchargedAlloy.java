@@ -3,6 +3,7 @@ package com.LunaGlaze.rainbowcompound.Linkage.createaddition;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
+import org.jetbrains.annotations.NotNull;
 
 public class OverchargedAlloy extends Item {
     public OverchargedAlloy() {
@@ -10,7 +11,7 @@ public class OverchargedAlloy extends Item {
     }
 
     @Override
-    public boolean isFoil(ItemStack stack) {
+    public boolean isFoil(@NotNull ItemStack stack) {
         return true;
     }
 }

@@ -98,22 +98,12 @@ config="${mod_id}.mixins.json"
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
 
-
 [[dependencies.${mod_id}]]
     modId="create"
     type="required"
     versionRange="[6.0.9,6.1.0)"
     ordering="NONE"
     side="BOTH"
-
-
-[[dependencies.${mod_id}]]
-    modId="jei"
-    type="optional"
-    versionRange="[19.25,)"
-    ordering="NONE"
-    side="BOTH"
-
 
 [[dependencies.${mod_id}]]
     modId="curios"
@@ -122,9 +112,17 @@ config="${mod_id}.mixins.json"
     ordering="NONE"
     side="BOTH"
 
+
 [[dependencies.${mod_id}]]
     modId="caelus"
-    type="required"
+    type="optional"
     versionRange="[7.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="[19.25,)"
     ordering="NONE"
     side="BOTH"

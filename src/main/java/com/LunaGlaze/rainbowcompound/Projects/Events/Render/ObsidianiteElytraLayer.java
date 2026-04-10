@@ -31,7 +31,6 @@ public class ObsidianiteElytraLayer<T extends LivingEntity, M extends EntityMode
 
     @Override
     public ResourceLocation getElytraTexture(ItemStack stack,  T entity) {
-        String name = stack.getItem().toString();
-        return ResourceLocation.fromNamespaceAndPath(LunaUtils.MOD_ID,"textures/entity/"+name+".png");
+        return ResourceLocation.fromNamespaceAndPath(LunaUtils.MOD_ID,"textures/entity/obsidianite_elytra");
     }
 }

@@ -1,7 +1,7 @@
 package com.LunaGlaze.rainbowcompound.Core.Tab;
 
 import com.LunaGlaze.rainbowcompound.Linkage.createaddition.CCAItemRegistry;
-import com.LunaGlaze.rainbowcompound.Linkage.farmersdelight.farmersdelightItemRegistry;
+import com.LunaGlaze.rainbowcompound.Linkage.farmersdelight.FarmersDelightItemRegistry;
 import com.LunaGlaze.rainbowcompound.Linkage.kaleidoscopecookery.KCItemRegistry;
 import com.LunaGlaze.rainbowcompound.LunaUtils;
 import com.LunaGlaze.rainbowcompound.Projects.Blocks.BlocksItemRegistry;
@@ -11,26 +11,17 @@ import com.LunaGlaze.rainbowcompound.Projects.Items.Basic.ItemsItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Foods.FoodsItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Props.PropsItemRegistry;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Tools.ToolsItemRegistry;
+import com.LunaGlaze.rainbowcompound.RainbowCompound;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
 public class RainbowcompoundTab {
-    public static boolean isFarmersDelightLoaded = false;
-
-    public static boolean isCuriousElytraLoaded = false;
-
-    public static boolean isCreateCraftAddLoaded = false;
-
-    public static boolean isKaleidoscopeCookeryLoaded = false;
-
     public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, LunaUtils.MOD_ID);
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> MOD_TAB = REGISTRY.register("rainbowcompound_group", () -> CreativeModeTab.builder()
             .icon(() -> (new ItemStack(ItemsItemRegistry.rainbowcompound.get())))
@@ -38,31 +29,33 @@ public class RainbowcompoundTab {
             .displayItems((parameters, output) -> {
                 // Basics
                 ItemsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
+                // Blocks
+                BlocksItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
+                // Foods
+                FoodsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 // Props
                 PropsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 // Tools
                 ToolsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 // Armors
                 ArmorsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
-                // Curios
-                if (isCuriousElytraLoaded) {
+
+                // Caelus
+                if (RainbowCompound.isCuriousElytraLoaded) {
                     CuriosElytraItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 }
-                // Foods
-                FoodsItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
+
+                // Create Additions Linkage
+                if (RainbowCompound.isCreateCraftAddLoaded) {
+                    CCAItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
+                }
                 // Farmers' Delight Linkage
-                if (isFarmersDelightLoaded) {
-                    farmersdelightItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
+                if (RainbowCompound.isFarmersDelightLoaded) {
+                    FarmersDelightItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 }
                 // Kaleidoscope Cookery Linkage
-                if (isKaleidoscopeCookeryLoaded) {
+                if (RainbowCompound.isKaleidoscopeCookeryLoaded) {
                     KCItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
-                }
-                // Blocks
-                BlocksItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
-                // Create Additions Linkage
-                if (isCreateCraftAddLoaded) {
-                    CCAItemRegistry.ITEMS.getEntries().stream().map(Supplier::get).forEach(output::accept);
                 }
             })
             .build()

@@ -23,7 +23,8 @@ public class GoldenAppleStew extends ConsumableItem {
         super(new Properties().food(food).rarity(Rarity.RARE),true);
     }
 
-    public ItemStack getContainerItem() {
+    @Override
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
         return new ItemStack(Items.BOWL);
     }
 }

@@ -26,7 +26,8 @@ public class EnchantedGoldenAppleStew extends ConsumableItem {
         super(new Properties().food(food).rarity(Rarity.EPIC),true);
     }
 
-    public ItemStack getContainerItem(ItemStack itemStack) {
+    @Override
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
         return new ItemStack(Items.BOWL);
     }
 

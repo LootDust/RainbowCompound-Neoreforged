@@ -31,8 +31,8 @@ import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 import java.util.concurrent.atomic.AtomicReference;
 
 
-@EventBusSubscriber
-public class CuriosDynamicElytra extends CuriosModElytraItem implements ICurio {
+//@EventBusSubscriber
+public class CuriosDynamicElytra extends CuriosModElytraItem {
     private static final int defense = 5;
     private static final float toughness = 2;
 
@@ -60,6 +60,7 @@ public class CuriosDynamicElytra extends CuriosModElytraItem implements ICurio {
         return 15;
     }
 
+    /*
     @SubscribeEvent(priority = EventPriority.LOW)
     @OnlyIn(Dist.CLIENT)
     public static void onPlayerTickClient(PlayerTickEvent event) {
@@ -91,7 +92,7 @@ public class CuriosDynamicElytra extends CuriosModElytraItem implements ICurio {
                         (lookAngle.z * d + (lookAngle.z * i - flyAngle.z) * t) * c));
             }
         }
-    }
+    }*/
 
     @Override
     public boolean elytraFlightTick(@NotNull ItemStack stack, net.minecraft.world.entity.LivingEntity entity, int flightTicks) {

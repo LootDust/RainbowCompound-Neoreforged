@@ -3,10 +3,7 @@
   "package": "com.LunaGlaze.rainbowcompound.Mixins",
   "mixins": [
     "ElytraLayerRendererMixin",
-    "JEIMysteriousItemMixin",
-    "VanillaLivingEntityMixin",
-    "VanillaLocalPlayerMixin",
-    "VanillaPlayerMixin"
+    "JEIMysteriousItemMixin"
   ],
   "client": [
   ],

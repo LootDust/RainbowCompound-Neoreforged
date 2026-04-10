@@ -2,6 +2,7 @@ package com.LunaGlaze.rainbowcompound.Projects.Items.Props;
 
 import com.LunaGlaze.rainbowcompound.Core.Registries.BaseRegistry;
 import com.LunaGlaze.rainbowcompound.LunaUtils;
+import com.LunaGlaze.rainbowcompound.RainbowCompound;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;

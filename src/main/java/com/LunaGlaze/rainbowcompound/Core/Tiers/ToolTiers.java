@@ -1,6 +1,5 @@
 package com.LunaGlaze.rainbowcompound.Core.Tiers;
 
-import com.LunaGlaze.rainbowcompound.Core.Date.LunaConfig;
 import com.LunaGlaze.rainbowcompound.Projects.Items.Basic.ItemsItemRegistry;
 import com.simibubi.create.AllItems;
 import net.minecraft.core.registries.Registries;
